@@ -23,9 +23,8 @@ class ViewController: UIViewController {
     let slots = [Img1, Img2, Img3]
   
     for img in slots {
-      let randomImg1 = imageNames.randomElement()
-      if let unwrapped1 = randomImg1 {
-        img?.image = UIImage(named: unwrapped1)
+      if let randomImg = imageNames.randomElement() {
+        img?.image = UIImage(named: randomImg)
       }
     }
     
@@ -37,6 +36,7 @@ class ViewController: UIViewController {
     } else {
       PointsLabel.text = String("")
     }
+    
     PointScore.text = String(points)
   }
   
@@ -44,7 +44,6 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
   }
-
 
 }
 
